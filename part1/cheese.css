@@ -1,1 +1,138 @@
+/*
+  Name: Xinyi Hu
+  Repo: https://github.com/xinyixih/cse134-hw3-css.git
+*/
 
+/* ---------- Typography and inheritance ---------- */
+/* font-family, color, and line-height are set once here and inherited */
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #4a2c0a;               /* dark brown, easy to read on yellow */
+  line-height: 1.6;
+  background-color: #fff8e1;    /* soft cream-yellow */
+ 
+  /* Layout: centered page with padding */
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+ 
+/* ---------- Basic selectors ---------- */
+h1 {
+  font-size: 2.5rem;            /* larger than h2 */
+  color: #e65100;               /* deep orange */
+  border-bottom: 4px solid #ffb300;
+  padding-bottom: 0.25rem;
+}
+ 
+h2 {
+  font-size: 1.6rem;
+  color: #ef6c00;               /* orange */
+}
+ 
+.latin {
+  font-style: italic;
+}
+ 
+#warning {
+  background-color: #ffe082;    /* amber highlight */
+  border-left: 6px solid #e65100;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+}
+ 
+/* ---------- Definition list ---------- */
+dt {
+  font-weight: bold;
+  color: #e65100;
+  margin-top: 1rem;
+}
+ 
+dd {
+  margin-left: 1.5rem;
+}
+ 
+/* ---------- Blockquote box model ---------- */
+blockquote {
+  border: 3px dashed #ffb300;   /* visible border */
+  margin: 2rem 1.5rem;          /* space outside the border */
+  padding: 1rem 1.5rem;         /* space inside the border */
+  background-color: #fff3c4;
+  border-radius: 10px;
+}
+ 
+blockquote p {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin: 0 0 0.5rem;
+}
+ 
+/* ---------- Form ---------- */
+fieldset {
+  border: 2px solid #ffb300;
+  border-radius: 8px;
+}
+ 
+legend {
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+ 
+input[type="text"] {
+  padding: 0.4rem;
+  border: 2px solid #ffb300;
+  border-radius: 4px;
+  font: inherit;
+}
+ 
+button {
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ef6c00;
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+ 
+button:hover {
+  background-color: #e65100;
+}
+ 
+/* ---------- Links: hover and focus ---------- */
+a {
+  color: #bf360c;
+}
+ 
+a:hover {
+  color: #ff8f00;
+  background-color: #fff3c4;
+  text-decoration: underline wavy;
+}
+ 
+/* Visible focus styles — outlines are replaced, never just removed */
+a:focus,
+input:focus,
+button:focus {
+  outline: 3px solid #ff6f00;
+  outline-offset: 2px;
+}
+ 
+/* ---------- Footer ---------- */
+body > footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 2px solid #ffb300;
+  font-size: 0.9rem;
+  text-align: center;
+}
+ 
+/* ---------- Cascade in action ---------- */
+/* Two rules with the same selector set different values for color. */
+header p {
+  color: #4a2c0a;
+}
+ 
+header p {
+  color: #8d5a1a;
+}
